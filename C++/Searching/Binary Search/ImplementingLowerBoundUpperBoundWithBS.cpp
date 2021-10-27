@@ -4,14 +4,16 @@ using namespace std;
 
 int main()
 {
-    int a[5]= {1,7,2,3,5};
+    //int a[5]= {1,7,2,3,5};
+   // int a[5]= {1,4,5,7,9};
+      int a[6]= {4,5,5,7,8,25};
     int n=sizeof(a)/sizeof(a[0]);
     sort(a,a+n);
 
     int start=0;
     int finish=n-1;
     int mid;
-    int key=16;
+    int key=9;
 
     while(start<=finish)
     {
@@ -45,20 +47,19 @@ int main()
     if(key==a[mid])
     {
 
-        cout<<"Lower Bound at position= "<<mid<<endl;
-        cout<<"VALUE= "<<a[mid]<<endl;
-        cout<<"Upper Bound at position= "<<start+1<<endl;
-        cout<<"VALUE= "<<a[start]<<endl;
+        cout<<" position= "<<mid<<endl;
+        cout<<"Lower bound= "<<a[mid]<<endl;
+        cout<<"  position= "<<mid+1<<endl;
+        cout<<"Upper Bound= "<<a[mid+1]<<endl;
     }
     else
     {
-        cout<<"Lower Bound at position= "<<start<<endl;
-        cout<<"VALUE= "<<a[start]<<endl;
-        // cout<<"Lower Bound at position= "<<finish<<endl;
-        //cout<<"VALUE= "<<a[finish]<<endl;
+        cout<<"at position= "<<start<<endl;
+        cout<<"Lower bound= "<<a[start]<<endl;
+        cout<<endl;
 
-        cout<<"Upper Bound at position= "<<start+1<<endl;
-        cout<<"VALUE= "<<a[start]<<endl;
+        cout<<"at position= "<<start<<endl;
+        cout<<"Upper bound= "<<a[start]<<endl;
     }
 
 
